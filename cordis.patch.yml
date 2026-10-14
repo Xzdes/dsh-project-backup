@@ -1,0 +1,5 @@
+# Bundle patch layer for dsh-project-backup.
+# New plugin rows are inserted with the `insert` list (not id-overrides).
+- insert:
+    - id: project-backup
+      name: dsh-project-backup

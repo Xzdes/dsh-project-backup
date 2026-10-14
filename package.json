@@ -1,0 +1,51 @@
+{
+  "name": "dsh-project-backup",
+  "version": "1.0.0",
+  "description": "Full project backup and rollback for DeepSeek Harness sessions",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "dsh": "0.2.0-rc.2"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "backup",
+    "rollback",
+    "snapshot",
+    "project-restore"
+  ],
+  "author": "xzdes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzdes/dsh-project-backup.git"
+  },
+  "homepage": "https://github.com/xzdes/dsh-project-backup#readme",
+  "bugs": "https://github.com/xzdes/dsh-project-backup/issues",
+  "dependencies": {
+    "@deepseek-ai/schemastery": "~3.18.4"
+  }
+}
